@@ -21,9 +21,11 @@
                 <li role="presentation">
                     <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
                 </li>
+                <!--
                 <li role="presentation">
                     <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
                 </li>
+                -->
                 <li role="presentation">
                     <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">My work</a>
                 </li>
@@ -35,39 +37,113 @@
     </header>
 
     <!--    Main content    -->
-    <section>
-        <h1>Here are samples of my custom AI generated images</h1>
+    <section id="maincontent">
+        <h1 class="main-heading">My training development projects</h1>
         <div class="gallery">
-            <div class="gallery__item">
-                <h2>"Mafia boss"</h2>
-                <p>
-                    AI Tool: Midjourney; Prompt: "Generate an image of a mafia boss, fat and over 50 looking bossy".
-                </p>
-                <img src="img/mafia_boss_s.png" class="gen__image" alt="Mafia boss picture">
-                <!-- <a href="#">See project on GitHub</a> -->
+            <!-- Project 1: REEL Movie App -->
+            <article class="project-card" aria-labelledby="proj-reel-title">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/reel-screenshot-2.png" aria-label="Open larger preview for REEL Movie App screenshot">
+                    <img src="img/reel-screenshot-2.png" alt="Screenshot of REEL Movie App showing movie list and details" loading="lazy">
+                </a>
+                <div class="project-card__body">
+                    <h3 id="proj-reel-title" class="project-card__title"><a href="https://reel-movies.netlify.app/" target="_blank" rel="noopener noreferrer">REEL Movie App</a></h3>
+                    <p class="project-card__desc">REEL Movie App is a full‑stack movie discovery application — a React front end consuming an Express + MongoDB REST API — that lets users browse, search, view details and save favorite movies.</p>
+                    <p class="project-card__objective"><strong>Objective:</strong> Demonstrate a production‑like full‑stack workflow by building an interactive, responsive UI backed by a secure REST API with JWT user authentication and persistent favorite lists.</p>
+
+                    <div class="project-card__links">
+                        <a class="btn btn--primary" href="https://reel-movies.netlify.app/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                            <a class="btn btn--muted" href="https://github.com/dkorotkov444/reel-client" target="_blank" rel="noopener noreferrer">Frontend (GitHub)</a>
+                            <a class="btn btn--muted" href="https://github.com/dkorotkov444/movie-api" target="_blank" rel="noopener noreferrer">Backend (GitHub)</a>
+                    </div>
+                    
+                    <div class="project-card__tech-block">
+                        <div class="project-card__tech-title">Technologies used</div>
+                        <ul class="project-card__tech" aria-label="Technologies used">
+                            <li class="tech-badge">React</li>
+                            <li class="tech-badge">Node.js</li>
+                            <li class="tech-badge">Express</li>
+                            <li class="tech-badge">MongoDB</li>
+                            <li class="tech-badge">Mongoose</li>
+                            <li class="tech-badge">Passport (JWT)</li>
+                            <li class="tech-badge">bcrypt</li>
+                            <li class="tech-badge">TMDB / curated dataset</li>
+                            <li class="tech-badge">express-validator</li>
+                            <li class="tech-badge">HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Meet Event Finder -->
+            <article class="project-card" aria-labelledby="proj-meet-title">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/meet-screenshot.png" aria-label="Open larger preview for Meet Event Finder screenshot">
+                    <img src="img/meet-screenshot.png" alt="Screenshot of Meet Event Finder showing event list and filters" loading="lazy">
+                </a>
+                <div class="project-card__body">
+                    <h3 id="proj-meet-title" class="project-card__title"><a href="https://meet-xi-blush.vercel.app" target="_blank" rel="noopener noreferrer">Meet Event Finder</a></h3>
+                    <p class="project-card__desc">Meet is a serverless progressive web app (PWA) built with React and Vite that helps users discover upcoming events across multiple cities, view details, and install the app for offline use.</p>
+                    <p class="project-card__objective"><strong>Objective:</strong> Demonstrate PWA features, TDD practices, and secure Google OAuth integration to fetch calendar events.</p>
+
+                    <div class="project-card__links">
+                        <a class="btn btn--primary" href="https://meet-xi-blush.vercel.app" target="_blank" rel="noopener noreferrer">Live demo</a>
+                        <a class="btn btn--muted" href="https://github.com/dkorotkov444/meet" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
+                    </div>
+
+                    <div class="project-card__tech-block">
+                        <div class="project-card__tech-title">Technologies used</div>
+                        <ul class="project-card__tech" aria-label="Technologies used">
+                            <li class="tech-badge">React</li>
+                            <li class="tech-badge">Vite</li>
+                            <li class="tech-badge">JavaScript</li>
+                            <li class="tech-badge">PWA / Service Worker</li>
+                            <li class="tech-badge">Google Calendar API (OAuth)</li>
+                            <li class="tech-badge">Jest</li>
+                            <li class="tech-badge">React Testing Library</li>
+                            <li class="tech-badge">HTML/CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Project 3: Pokedex -->
+            <article class="project-card" aria-labelledby="proj-pokedex-title">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/pokedex-screenshot.png" aria-label="Open larger preview for Pokedex screenshot">
+                    <img src="img/pokedex-screenshot.png" alt="Screenshot of Pokedex app showing pokemon list" loading="lazy">
+                </a>
+                <div class="project-card__body">
+                    <h3 id="proj-pokedex-title" class="project-card__title"><a href="https://dkorotkov444.github.io/pokedex/" target="_blank" rel="noopener noreferrer">Pokedex</a></h3>
+                    <p class="project-card__desc">A small static front-end app that fetches data from the public PokéAPI and displays a paginated list of Pokémon with a details modal and basic navigation.</p>
+                    <p class="project-card__objective"><strong>Objective:</strong> Provide a lightweight, dependency-free UI that demonstrates API consumption, modals, and pagination while remaining easy to run without a build system.</p>
+
+                    <div class="project-card__links">
+                        <a class="btn btn--primary" href="https://dkorotkov444.github.io/pokedex/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                        <a class="btn btn--muted" href="https://github.com/dkorotkov444/pokedex" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
+                    </div>
+
+                    <div class="project-card__tech-block">
+                        <div class="project-card__tech-title">Technologies used</div>
+                        <ul class="project-card__tech" aria-label="Technologies used">
+                            <li class="tech-badge">Vanilla JavaScript</li>
+                            <li class="tech-badge">Bootstrap 5</li>
+                            <li class="tech-badge">PokéAPI</li>
+                            <li class="tech-badge">Promise & fetch polyfills</li>
+                            <li class="tech-badge">HTML / CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
             </div>
-            <div class="gallery__item">
-                <h2>"Astronaut"</h2>
-                <p>
-                    AI Tool: Midjourney; Prompt: "Draw me in an astronaut suit".
-                </p>
-                <img src="img/astronaut_s.png" class="gen__image" alt="Astronaut portrait">
+
+            <!-- Modal for image preview -->
+            <div class="modal-overlay" id="img-modal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal" role="document">
+                    <button class="modal__close" id="img-modal-close" aria-label="Close preview">Close</button>
+                    <div class="modal__inner">
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" id="img-modal-img" class="modal__img">
+                        <div id="img-modal-caption" class="modal__caption"></div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery__item">
-                <h2>"Pompei"</h2>
-                <p>
-                    AI Tool: Midjourney; Prompt: "Generate an image of a town being destroyed by a nearby volcano".
-                </p>
-                <img src="img/pompei_s.png" class="gen__image" alt="Destroyed Pompei image">
-             </div>
-            <div class="gallery__item">
-                <h2>"Alien invasion"</h2>
-                <p>
-                    AI Tool: Midjourney; Prompt: "Add in the sky 10-12 flying alien space fighters".
-                </p>
-                <img src="img/alien_invasion_s.png" class="gen__image" alt="Aliens attack European town">
-            </div>
-        </div>
     </section>
     
     <footer class="page-footer"> 
@@ -77,14 +153,13 @@
         <a href="https://github.com/dkorotkov444/portfolio-website" target="_blank"><img src="img/github-58.svg" alt="GitHub logo"></a>
         <!--   LinkedIn Link -->
         <a href="https://www.linkedin.com/in/dmitrikorotkov/" target="_blank"><img src="img/LI-In-Bug-32x32.png" alt="LinkedIn logo"></a>
-        <!--   Strava Logo -->
-        <img src="img/strava_inc_logo-32x32.jfif" alt="Strava logo">
         </div>
         <br><br>
         <a href="#">Back to top</a>
     </footer>
 
     <script src="js/tota11y.min.js"></script>
+    <script src="js/site.js"></script>
 
 </body>
 </html>

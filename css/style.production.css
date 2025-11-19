@@ -326,27 +326,15 @@ button:focus {
 }
 @-webkit-keyframes sun-color-change {
     /* Makes no sense to make these colors to variables, they are only used once */
-    0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: #fcffad;
-    }
-    100% {
-      fill: #f76414;
-    }
+    0% { fill: #edc655; }
+    50% { fill: #fcffad; }
+    100% { fill: #f76414; }
 }
 @keyframes sun-color-change {
     /* Makes no sense to make these colors to variables, they are only used once */
-    0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: #fcffad;
-    }
-    100% {
-      fill: #f76414;
-    }
+    0% { fill: #edc655; }
+    50% { fill: #fcffad; }
+    100% { fill: #f76414; }
 }
 
 .cloud-front {
@@ -397,3 +385,58 @@ button:focus {
               transform: translate(100px, 48px);
     }
 }
+
+/* Project card and modal styles moved from work.html */
+.gallery { display:-ms-grid; display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px; -webkit-box-align:stretch; -ms-flex-align:stretch; align-items:stretch; margin:20px auto; max-width:1200px; padding:0 12px; }
+.project-card { background:#fff; border-radius:6px; overflow:hidden; -webkit-box-shadow:0 6px 18px rgba(0,0,0,0.06); box-shadow:0 6px 18px rgba(0,0,0,0.06); -webkit-transition:-webkit-transform .15s ease, -webkit-box-shadow .15s ease; transition:-webkit-transform .15s ease, -webkit-box-shadow .15s ease; -o-transition:transform .15s ease, box-shadow .15s ease; transition:transform .15s ease, box-shadow .15s ease; transition:transform .15s ease, box-shadow .15s ease, -webkit-transform .15s ease, -webkit-box-shadow .15s ease; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column; height:100%; }
+.project-card:hover { -webkit-transform:translateY(-6px); -ms-transform:translateY(-6px); transform:translateY(-6px); -webkit-box-shadow:0 12px 24px rgba(0,0,0,0.10); box-shadow:0 12px 24px rgba(0,0,0,0.10); }
+.project-card__screenshot{ display:block; width:100%; height:160px; overflow:hidden; background:#f3f4f6; }
+.project-card__screenshot img{ width:100%; height:100%; -o-object-fit:cover; object-fit:cover; display:block; }
+
+/* Modal / lightbox styles */
+.modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,0.6); display:none; -webkit-box-align:center; -ms-flex-align:center; align-items:center; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; z-index:1200; padding:20px; }
+.modal-overlay.is-open{ display:-webkit-box; display:-ms-flexbox; display:flex; }
+.modal{ background:#fff; border-radius:8px; max-width:1100px; width:100%; max-height:90vh; overflow:auto; -webkit-box-shadow:0 18px 50px rgba(2,6,23,.5); box-shadow:0 18px 50px rgba(2,6,23,.5); position:relative; }
+.modal__inner{ padding:10px; }
+.modal__img{ width:100%; height:auto; display:block; border-radius:6px; }
+.modal__close{ position:absolute; top:8px; right:8px; background:#111; color:#fff; border:none; padding:8px 10px; border-radius:6px; cursor:pointer; font-size:0.95rem; }
+.modal__caption{ font-size:0.95rem; color:#333; margin-top:8px; }
+.project-card__body{ padding:12px 14px; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column; -webkit-box-flex:1; -ms-flex:1 1 auto; flex:1 1 auto; }
+.project-card__title{ margin:0 0 6px; font-size:1.05rem; }
+.project-card__title a{ color:inherit; text-decoration:none; }
+.project-card__desc{ margin:0 0 10px; color:#444; font-size:.95rem; line-height:1.3; }
+.project-card__links{ display:-webkit-box; display:-ms-flexbox; display:flex; gap:8px; margin-top:auto; margin-bottom:10px; }
+.btn{ padding:6px 10px; border-radius:4px; text-decoration:none; font-size:.9rem; display:inline-block; }
+.btn--primary{ background:#0b74de; color:#fff; }
+.btn--muted{ background:#f1f1f1; color:#222; }
+.project-card__tech{ list-style:none; padding:0; margin:0; display:-webkit-box; display:-ms-flexbox; display:flex; gap:6px; -ms-flex-wrap:wrap; flex-wrap:wrap; }
+.tech-badge{ background:#eee; padding:4px 8px; border-radius:999px; font-size:.8rem; color:#333; }
+.project-card__tech-block{ margin-top:8px; }
+.project-card__tech-title{ font-size:0.9rem; margin:0 0 6px; color:#222; font-weight:600; }
+.project-card__objective{ margin:6px 0 0; color:#444; font-size:.95rem; }
+
+/* Responsive adjustments */
+@media (max-width:420px){ .project-card__screenshot{ height:140px; } }
+
+/* Medium screens: slightly taller screenshots */
+@media (min-width:768px){ .project-card__screenshot{ height:180px; } }
+
+/* Large (L) screens and up: make cards noticeably bigger */
+@media (min-width:1100px){
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:24px; max-width:1400px; }
+    .project-card__screenshot{ height:220px; }
+    .project-card { min-height:520px; }
+    .project-card__body{ padding:16px 18px; }
+    .project-card__title{ font-size:1.15rem; }
+    .project-card__desc{ font-size:1rem; }
+}
+
+/* Extra large screens: larger thumbnails */
+@media (min-width:1400px){
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap:28px; }
+    .project-card__screenshot{ height:260px; }
+    .project-card { min-height:600px; }
+}
+
+/* Small utility: center the page main heading (moved from inline style in work.html) */
+.main-heading { text-align: center; }
