@@ -18,9 +18,10 @@ Key files and folders
 
 Current state
 -------------
-- The `work.html` page contains three project cards (REEL Movie App, Meet Event Finder, Pokedex) with thumbnails and an accessible modal preview.
+- The `work.html` page contains four project cards (REEL Movie App, Meet Event Finder, Pokedex, and Chat Demo App) with thumbnails and an accessible modal preview.
 - Inline CSS and JS that were previously embedded in `work.html` have been extracted into `css/styles.css` and `js/site.js`; pages load the production stylesheet `css/style.production.css`.
 - The modal provides keyboard handling (Escape to close) and a simple Tab focus trap.
+- Responsive gallery layout: uses CSS Grid with `auto-fit` and `minmax()` to adapt across all screen sizes—from 1 column on mobile to 4 columns on XL screens (1400px+).
 
 Run locally (development)
 -------------------------
