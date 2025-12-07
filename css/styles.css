@@ -319,7 +319,7 @@ button:focus {
 }
 
 /* Project card and modal styles moved from work.html */
-.gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px; align-items:stretch; margin:20px auto; max-width:1200px; padding:0 12px; }
+.gallery { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px; align-items:stretch; margin:20px auto; padding:0 12px; }
 .project-card { background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.06); transition:transform .15s ease, box-shadow .15s ease; display:flex; flex-direction:column; height:100%; }
 .project-card:hover { transform:translateY(-6px); box-shadow:0 12px 24px rgba(0,0,0,0.10); }
 .project-card__screenshot{ display:block; width:100%; height:160px; overflow:hidden; background:#f3f4f6; }
@@ -355,7 +355,7 @@ button:focus {
 
 /* Large (L) screens and up: make cards noticeably bigger */
 @media (min-width:1100px){
-    .gallery { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:24px; max-width:1400px; }
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap:24px; }
     .project-card__screenshot{ height:220px; }
     .project-card { min-height:520px; }
     .project-card__body{ padding:16px 18px; }
