@@ -144,6 +144,7 @@
                     <p class="project-card__objective"><strong>Objective:</strong> Build a simple chat app for mobile devices demonstrating real-time messaging, Firebase integration, media sharing capabilities, offline persistence, and screen reader compatibility.</p>
 
                     <div class="project-card__links">
+                        <button class="btn btn--primary js-open-video-modal" data-video="img/chat-demo-record-5.3.webm" aria-label="Play demo video for Chat Demo App">Demo video</button>
                         <a class="btn btn--muted" href="https://github.com/dkorotkov444/chat-demo" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
                     </div>
 
@@ -174,6 +175,19 @@
                     <div class="modal__inner">
                                         <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" id="img-modal-img" class="modal__img">
                         <div id="img-modal-caption" class="modal__caption"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal for video preview -->
+            <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="modal" role="document">
+                    <button class="modal__close" id="video-modal-close" aria-label="Close video">Close</button>
+                    <div class="modal__inner">
+                        <video width="100%" controls id="video-modal-video" style="border-radius: 6px;">
+                            <source src="" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
