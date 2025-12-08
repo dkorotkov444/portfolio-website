@@ -18,9 +18,10 @@ Key files and folders
 
 Current state
 -------------
-- The `work.html` page contains four project cards (REEL Movie App, Meet Event Finder, Pokedex, and Chat Demo App) with thumbnails and an accessible modal preview.
+- The `index.html` home page includes a comprehensive skills section organized into four categories: Backend Development, Frontend Development, Mobile Development, and Additional Technologies. The skills grid uses CSS Grid with responsive layouts (1 column on mobile to 4 columns on XL screens at 1400px+).
+- The `work.html` page contains four project cards (REEL Movie App, Meet Event Finder, Pokedex, and Chat Demo App) with thumbnails and accessible modal previews. The Chat Demo App includes a dedicated video modal for playing the demo video.
 - Inline CSS and JS that were previously embedded in `work.html` have been extracted into `css/styles.css` and `js/site.js`; pages load the production stylesheet `css/style.production.css`.
-- The modal provides keyboard handling (Escape to close) and a simple Tab focus trap.
+- Modal system provides keyboard handling (Escape to close) and focus management. Video modal supports play, pause, and fullscreen controls.
 - Responsive gallery layout: uses CSS Grid with `auto-fit` and `minmax()` to adapt across all screen sizes—from 1 column on mobile to 4 columns on XL screens (1400px+).
 
 Run locally (development)
