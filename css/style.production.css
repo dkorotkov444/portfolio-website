@@ -1,4 +1,4 @@
-/*
+/**
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
@@ -448,14 +448,42 @@ button:focus {
 .main-heading { text-align: center; }
 
 /* Home page sections */
-.skills-section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
-.skills-section h2 { text-align: center; font-size: 30px; margin-bottom: 40px; color: #357b70; }
-.skills-grid { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(300px, 1fr))[auto-fit]; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+.skills-section {
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
+    padding: 0 20px;
+}
+.skills-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 22px;
+    color: #357b70;
+}
+.skills-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px 40px;
+    margin-bottom: 40px;
+}
 
 @media (min-width: 1400px) {
-    .skills-grid { -ms-grid-columns: 1fr 1fr 1fr 1fr; grid-template-columns: repeat(4, 1fr); }
+    .skills-grid {
+        -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .skills-section, .profile {
+        max-width: 1500px;
+    }
 }
-.skill-category { background: #f9f9f9; padding: 25px; border-radius: 8px; border-left: 4px solid #357b70; }
+.skill-category {
+    background: #f9f9f9;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border-left: 4px solid #357b70;
+    min-height: 180px;
+}
 .skill-category h3 { font-size: 24px; margin-top: 0; color: #357b70; }
 .skill-category p { color: #666; margin-bottom: 15px; font-size: 0.95rem; }
 .skill-list { list-style: none; padding: 0; margin: 0; }

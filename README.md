@@ -9,7 +9,7 @@ Summary
 
 Key files and folders
 ---------------------
-- `index.html`, `about.html`, `work.html`, `contact.html` — top-level pages.
+- `index.html` (home page at root), `html/about.html`, `html/work.html`, `html/contact.html` — main pages (about, work, contact now in html/ directory).
 - `css/style.production.css` — production-ready stylesheet (autoprefixed build output). This file is loaded by the pages.
 - `css/styles.css` — human-editable source stylesheet (contains CSS variables and easier-to-edit rules). Keep this as the source of truth while developing.
 - `js/site.js` — small site scripts (modal lightbox, a11y helpers).
@@ -19,7 +19,7 @@ Key files and folders
 Current state
 -------------
 - The `index.html` home page includes a comprehensive skills section organized into four categories: Backend Development, Frontend Development, Mobile Development, and Additional Technologies. The skills grid uses CSS Grid with responsive layouts (1 column on mobile to 4 columns on XL screens at 1400px+).
-- The `work.html` page contains four project cards (REEL Movie App, Meet Event Finder, Pokedex, and Chat Demo App) with thumbnails and accessible modal previews. The Chat Demo App includes a dedicated video modal for playing the demo video.
+- The `work.html` page contains five project cards (REEL Movie App (React), KINO Movie App (Angular), Meet Event Finder, Pokedex, and Chat Demo App) with thumbnails and accessible modal previews. The Chat Demo App includes a dedicated video modal for playing the demo video.
 - Inline CSS and JS that were previously embedded in `work.html` have been extracted into `css/styles.css` and `js/site.js`; pages load the production stylesheet `css/style.production.css`.
 - Modal system provides keyboard handling (Escape to close) and focus management. Video modal supports play, pause, and fullscreen controls.
 - Responsive gallery layout: uses CSS Grid with `auto-fit` and `minmax()` to adapt across all screen sizes—from 1 column on mobile to 4 columns on XL screens (1400px+).
@@ -33,13 +33,13 @@ There is no build tool required to preview the site. Two easy options (PowerShel
 
 	npx serve -s . -l 8000
 
-	Then open http://localhost:8000/work.html
+	Then open http://localhost:8000/index.html
 
 Note: linting and accessibility checks were performed during development (examples: htmlhint, pa11y, Lighthouse).
 
 Editing the site
 ----------------
-- To edit the project gallery, open `work.html` and update or add `<article class="project-card">` entries inside the `.gallery` container. Each card has:
+- To edit the project gallery, open `html/work.html` and update or add `<article class="project-card">` entries inside the `.gallery` container. Each card has:
 	- a thumbnail anchor with `data-full="img/…"` that opens the modal preview
 	- a title linked to the live demo
 	- a short description and an Objective paragraph

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Work</title>
-    <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.production.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
     <header class="page-header">
-        <img src="img/KA-logo.jfif" alt="Korotkov Advisory logo" class="page-header__item">
+        <img src="../img/KA-logo.jfif" alt="Korotkov Advisory logo" class="page-header__item">
         <nav class="main-navigation page-header__item">
             <ul role="menubar" class="navigation-list">
                 <!-- Links from header to sub-pages -->
                 <li role="presentation">
-                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    <a href="../index.html" role="menuitem" class="navigation-list__item">Home</a>
                 </li>
-                <!--
+                <!--    ABOUT ME LINK DISABLED
                 <li role="presentation">
                     <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
                 </li>
@@ -40,13 +40,13 @@
     <section id="maincontent">
         <h1 class="main-heading">My training development projects</h1>
         <div class="gallery">
-            <!-- Project 1: REEL Movie App -->
+            <!-- Project 1: REEL Movie App (React) -->
             <article class="project-card" aria-labelledby="proj-reel-title">
-                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/reel-screenshot-2.png" aria-label="Open larger preview for REEL Movie App screenshot">
-                    <img src="img/reel-screenshot-2.png" alt="Screenshot of REEL Movie App showing movie list and details" loading="lazy">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="../img/reel-screenshot-2.png" aria-label="Open larger preview for REEL Movie App screenshot">
+                    <img src="../img/reel-screenshot-2.png" alt="Screenshot of REEL Movie App showing movie list and details" loading="lazy">
                 </a>
                 <div class="project-card__body">
-                    <h3 id="proj-reel-title" class="project-card__title"><a href="https://reel-movies.netlify.app/" target="_blank" rel="noopener noreferrer">REEL Movie App</a></h3>
+                    <h3 id="proj-reel-title" class="project-card__title"><a href="https://reel-movies.netlify.app/" target="_blank" rel="noopener noreferrer">REEL Movie App (React/Node.js)</a></h3>
                     <p class="project-card__desc">REEL Movie App is a full‑stack movie discovery application — a React front end consuming an Express + MongoDB REST API — that lets users browse, search, view details and save favorite movies.</p>
                     <p class="project-card__objective"><strong>Objective:</strong> Demonstrate a production‑like full‑stack workflow by building an interactive, responsive UI backed by a secure REST API with JWT user authentication and persistent favorite lists.</p>
 
@@ -74,10 +74,42 @@
                 </div>
             </article>
 
-            <!-- Project 2: Meet Event Finder -->
+            <!-- Project 2: KINO Movie App (Angular) -->
+            <article class="project-card" aria-labelledby="proj-kino-title">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="../img/kino-screenshot.png" aria-label="Open larger preview for KINO Movie App screenshot">
+                    <img src="../img/kino-screenshot.png" alt="Screenshot of KINO Movie App (Angular)" loading="lazy">
+                </a>
+                <div class="project-card__body">
+                    <h3 id="proj-kino-title" class="project-card__title"><a href="https://dkorotkov444.github.io/kino-client/welcome" target="_blank" rel="noopener noreferrer">KINO Movie App (Angular)</a></h3>
+                    <p class="project-card__desc">KINO Movie App is a modern Angular 21 client for browsing and managing movies using the REEL Movie API. It features JWT authentication, Material Design UI, reactive movie browsing, and a clean service-oriented architecture.</p>
+                    <p class="project-card__objective"><strong>Objective:</strong> Demonstrate a scalable, modern Angular workflow with standalone components, SSR, and robust error handling, providing a seamless movie discovery and management experience.</p>
+
+                    <div class="project-card__links">
+                        <a class="btn btn--primary" href="https://dkorotkov444.github.io/kino-client/welcome" target="_blank" rel="noopener noreferrer">Live demo</a>
+                        <a class="btn btn--muted" href="https://github.com/dkorotkov444/kino-client" target="_blank" rel="noopener noreferrer">Frontend (GitHub)</a>
+                        <a class="btn btn--muted" href="https://github.com/dkorotkov444/movie-api" target="_blank" rel="noopener noreferrer">Backend (GitHub)</a>
+                    </div>
+                    <div class="project-card__tech-block">
+                        <div class="project-card__tech-title">Technologies used</div>
+                        <ul class="project-card__tech" aria-label="Technologies used">
+                            <li class="tech-badge">Angular 21</li>
+                            <li class="tech-badge">TypeScript</li>
+                            <li class="tech-badge">RxJS</li>
+                            <li class="tech-badge">Angular Material</li>
+                            <li class="tech-badge">Standalone Components</li>
+                            <li class="tech-badge">JWT Auth</li>
+                            <li class="tech-badge">REST API</li>
+                            <li class="tech-badge">SSR</li>
+                            <li class="tech-badge">HTML/CSS/SCSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Meet Event Finder -->
             <article class="project-card" aria-labelledby="proj-meet-title">
-                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/meet-screenshot.png" aria-label="Open larger preview for Meet Event Finder screenshot">
-                    <img src="img/meet-screenshot.png" alt="Screenshot of Meet Event Finder showing event list and filters" loading="lazy">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="../img/meet-screenshot.png" aria-label="Open larger preview for Meet Event Finder screenshot">
+                    <img src="../img/meet-screenshot.png" alt="Screenshot of Meet Event Finder showing event list and filters" loading="lazy">
                 </a>
                 <div class="project-card__body">
                     <h3 id="proj-meet-title" class="project-card__title"><a href="https://meet-xi-blush.vercel.app" target="_blank" rel="noopener noreferrer">Meet Event Finder</a></h3>
@@ -105,10 +137,10 @@
                 </div>
             </article>
             
-            <!-- Project 3: Pokedex -->
+            <!-- Project 4: Pokedex -->
             <article class="project-card" aria-labelledby="proj-pokedex-title">
-                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/pokedex-screenshot.png" aria-label="Open larger preview for Pokedex screenshot">
-                    <img src="img/pokedex-screenshot.png" alt="Screenshot of Pokedex app showing pokemon list" loading="lazy">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="../img/pokedex-screenshot.png" aria-label="Open larger preview for Pokedex screenshot">
+                    <img src="../img/pokedex-screenshot.png" alt="Screenshot of Pokedex app showing pokemon list" loading="lazy">
                 </a>
                 <div class="project-card__body">
                     <h3 id="proj-pokedex-title" class="project-card__title"><a href="https://dkorotkov444.github.io/pokedex/" target="_blank" rel="noopener noreferrer">Pokedex</a></h3>
@@ -133,10 +165,10 @@
                 </div>
             </article>
 
-            <!-- Project 4: Chat Demo App -->
+            <!-- Project 5: Chat Demo App -->
             <article class="project-card" aria-labelledby="proj-chat-title">
-                <a class="project-card__screenshot js-open-modal" href="#" data-full="img/chat-screenshot.png" aria-label="Open larger preview for Chat Demo App screenshot">
-                    <img src="img/chat-screenshot.png" alt="Screenshot of Chat Demo App" loading="lazy">
+                <a class="project-card__screenshot js-open-modal" href="#" data-full="../img/chat-screenshot.png" aria-label="Open larger preview for Chat Demo App screenshot">
+                    <img src="../img/chat-screenshot.png" alt="Screenshot of Chat Demo App" loading="lazy">
                 </a>
                 <div class="project-card__body">
                     <h3 id="proj-chat-title" class="project-card__title">Chat Demo App</h3>
@@ -144,7 +176,7 @@
                     <p class="project-card__objective"><strong>Objective:</strong> Build a simple chat app for mobile devices demonstrating real-time messaging, Firebase integration, media sharing capabilities, offline persistence, and screen reader compatibility.</p>
 
                     <div class="project-card__links">
-                        <button class="btn btn--primary js-open-video-modal" data-video="img/chat-demo-record-5.3.webm" aria-label="Play demo video for Chat Demo App">Demo video</button>
+                        <button class="btn btn--primary js-open-video-modal" data-video="../img/chat-demo-record-5.3.webm" aria-label="Play demo video for Chat Demo App">Demo video</button>
                         <a class="btn btn--muted" href="https://github.com/dkorotkov444/chat-demo" target="_blank" rel="noopener noreferrer">Source (GitHub)</a>
                     </div>
 
@@ -205,8 +237,8 @@
         <a href="#">Back to top</a>
     </footer>
 
-    <script src="js/tota11y.min.js"></script>
-    <script src="js/site.js"></script>
+    <script src="../js/tota11y.min.js"></script>
+    <script src="../js/site.js"></script>
 
 </body>
 </html>
